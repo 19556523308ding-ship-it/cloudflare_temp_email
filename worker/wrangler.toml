@@ -9,10 +9,10 @@ keep_vars = true
 # ]
 
 # if you want deploy worker with frontend assets, you need to add assets
-# [assets]
-# directory = "../frontend/dist/"
-# binding = "ASSETS"
-# run_worker_first = true
+[assets]
+directory = "assets"
+binding = "ASSETS"
+run_worker_first = true
 
 # enable cron if you want set auto clean up
 # [triggers]
