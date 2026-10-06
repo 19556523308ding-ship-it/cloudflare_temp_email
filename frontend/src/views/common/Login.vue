@@ -15,7 +15,11 @@ const props = defineProps({
     bindUserAddress: {
         type: Function,
         default: async () => { await api.bindUserAddress(); },
-        required: true
+        required: false
+    },
+    defaultTab: {
+        type: String,
+        default: 'signin'
     },
     newAddressPath: {
         type: Function,
@@ -30,7 +34,7 @@ const props = defineProps({
                 }),
             });
         },
-        required: true
+        required: false
     },
 })
 
@@ -43,7 +47,7 @@ const {
     showAddressCredential, userSettings, addressPassword
 } = useGlobalState()
 
-const tabValue = ref('signin')
+const tabValue = ref(props.defaultTab || 'signin')
 const credential = ref('')
 const emailName = ref("")
 const emailDomain = ref("")

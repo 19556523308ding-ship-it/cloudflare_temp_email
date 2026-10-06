@@ -646,11 +646,40 @@ onBeforeUnmount(() => {
 }
 
 .overlay-dark-backgroud {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(56, 189, 248, 0.15);
+  border-left: 3px solid #38BDF8;
 }
 
 .overlay-light-backgroud {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(59, 130, 246, 0.08);
+  border-left: 3px solid #2563EB;
+}
+
+:deep(.n-list-item) {
+  transition: all 0.2s ease;
+  border-radius: 10px;
+  margin: 4px 6px;
+}
+
+:deep(.n-list-item:hover) {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+:deep(.mail-list-unread) {
+  font-weight: 600;
+  position: relative;
+}
+
+:deep(.mail-list-unread)::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2563EB;
 }
 
 .mail-item {

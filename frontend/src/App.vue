@@ -30,6 +30,13 @@ const gridMaxCols = computed(() => showAd.value ? 8 : 12);
 watchEffect(() => {
   if (typeof document === 'undefined') return
   document.documentElement.lang = isSupportedLocale(locale.value) ? locale.value : DEFAULT_LOCALE
+  if (isDark.value) {
+    document.documentElement.classList.add('dark-theme')
+    document.documentElement.setAttribute('data-theme', 'dark')
+  } else {
+    document.documentElement.classList.remove('dark-theme')
+    document.documentElement.removeAttribute('data-theme')
+  }
 })
 
 if (showAd.value) {
@@ -127,6 +134,15 @@ onMounted(async () => {
 
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-page, #F8FAFC);
+  color: var(--text-main, #0F172A);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+}
+
 .n-switch {
   margin-left: 10px;
   margin-right: 10px;

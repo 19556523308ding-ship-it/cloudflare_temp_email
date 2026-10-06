@@ -17,6 +17,7 @@ import { getRouterPathWithLang, hashPassword } from '../utils'
 import { DEFAULT_LOCALE, isSupportedLocale, replaceLocaleInFullPath } from '../i18n/utils'
 import { getLocaleLabel, SUPPORTED_LOCALES } from '../i18n/locale-registry'
 import Turnstile from '../components/Turnstile.vue'
+import BrandLogo from '../components/BrandLogo.vue'
 import { NButton, NIcon } from 'naive-ui'
 
 const message = useMessage()
@@ -246,14 +247,11 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div>
+    <div class="app-header-bar">
         <n-page-header>
             <template #title>
-                <h3>{{ openSettings.title || t('title') }}</h3>
-            </template>
-            <template #avatar>
-                <div @click="logoClick">
-                    <n-avatar style="margin-left: 10px;" src="/logo.png" />
+                <div @click="logoClick" class="logo-click-area">
+                    <BrandLogo :compact="isMobile" />
                 </div>
             </template>
             <template #extra>
