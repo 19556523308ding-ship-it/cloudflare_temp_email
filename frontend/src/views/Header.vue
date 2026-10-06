@@ -272,20 +272,6 @@ onMounted(async () => {
                             <n-icon :component="KeyboardArrowDownOutlined" style="margin-left: 4px;" />
                         </n-button>
                     </n-dropdown>
-                    <n-button
-                        v-if="!isMobile && showGithubForCurrentUser"
-                        text
-                        size="small"
-                        class="header-version-button"
-                        tag="a"
-                        target="_blank"
-                        href="https://github.com/dreamhunter2333/cloudflare_temp_email"
-                    >
-                        <template #icon>
-                            <n-icon :component="GithubAlt" />
-                        </template>
-                        {{ version || 'Github' }}
-                    </n-button>
                 </n-space>
             </template>
         </n-page-header>
@@ -300,17 +286,6 @@ onMounted(async () => {
                             <n-icon :component="KeyboardArrowDownOutlined" class="mobile-menu-action-arrow" />
                         </button>
                     </n-dropdown>
-                    <a
-                        v-if="showGithubForCurrentUser"
-                        class="mobile-menu-utility-button"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://github.com/dreamhunter2333/cloudflare_temp_email"
-                    >
-                        <n-icon :component="GithubAlt" />
-                        <span class="mobile-menu-action-label">{{ version || 'Github' }}</span>
-                        <n-icon :component="OpenInNewOutlined" class="mobile-menu-action-arrow" />
-                    </a>
                 </div>
             </n-drawer-content>
         </n-drawer>
