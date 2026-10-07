@@ -219,23 +219,10 @@ useHead({
     ]
 });
 
-const logoClickCount = ref(0);
 const logoClick = async () => {
-    if (route.path.includes("admin")) {
-        logoClickCount.value = 0;
-        return;
-    }
-    if (logoClickCount.value >= 5) {
-        logoClickCount.value = 0;
-        message.info("Change to admin Page");
-        loading.value = true;
-        await router.push(getRouterPathWithLang('/admin', locale.value));
-        loading.value = false;
-    } else {
-        logoClickCount.value++;
-    }
-    if (logoClickCount.value > 0) {
-        message.info(`Click ${5 - logoClickCount.value + 1} times to enter the admin page`);
+    // 正常品牌交互：点击 Logo 返回首页，不弹出任何 admin 计数提示
+    if (route.path !== '/' && route.path !== getRouterPathWithLang('/', locale.value)) {
+        await router.push(getRouterPathWithLang('/', locale.value));
     }
 }
 
