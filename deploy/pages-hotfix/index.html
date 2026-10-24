@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinzhai Mail - 快速、安全、免费的临时邮箱平台</title>
+  <meta name="description" content="Jinzhai Mail（金寨云邮）：无需注册，即开即用。保护真实邮箱，极速收信与验证码高亮提取。">
+
+  <!-- ============ SEO 基础配置 ============
+       静态 meta 的作用是「首屏前可读」：爬虫与社交平台抓取卡片时，
+       Vue 还没挂载、usePageSeo 尚未注入运行时 meta。
+       运行时 usePageSeo（src/seo/usePageSeo.js）会用 unhead 覆盖同
+       key 的标签（已实测：覆盖而非追加，标签数恒为 1），因此这里
+       写全局默认值 + 首页值不会造成重复标签。 -->
+  <link rel="canonical" href="https://mail.jinzhai.icu/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph：og:image 必须是绝对 URL，社交平台不解析相对路径 -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mail.jinzhai.icu/">
+  <meta property="og:site_name" content="金寨云邮">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="Jinzhai Mail - 快速、安全、免费的临时邮箱平台">
+  <meta property="og:description" content="Jinzhai Mail（金寨云邮）：无需注册，即开即用。保护真实邮箱，极速收信与验证码高亮提取。">
+  <meta property="og:image" content="https://mail.jinzhai.icu/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="Jinzhai Mail 金寨云邮">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jinzhai Mail - 快速、安全、免费的临时邮箱平台">
+  <meta name="twitter:description" content="Jinzhai Mail（金寨云邮）：无需注册，即开即用。保护真实邮箱，极速收信与验证码高亮提取。">
+  <meta name="twitter:image" content="https://mail.jinzhai.icu/og-image.png">
+  <meta name="twitter:image:alt" content="Jinzhai Mail 金寨云邮">
+
+  <!-- 结构化数据：告诉 Google 这是一个免费 Web 应用（富媒体卡片） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Jinzhai Mail（金寨云邮）",
+    "alternateName": "Jinzhai Mail",
+    "description": "无需注册、即开即用的临时邮箱平台：保护真实邮箱，极速收信并高亮提取验证码。",
+    "url": "https://mail.jinzhai.icu/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": "zh-CN",
+    "logo": "https://mail.jinzhai.icu/og-image.png",
+    "image": "https://mail.jinzhai.icu/og-image.png",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY"
+    }
+  }
+  </script>
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#3B82F6">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08111F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Jinzhai Mail">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" href="/logo.png" sizes="any">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <script id="app-config" type="application/json">
+  {
+    "API_BASE": "https://api-mail.jinzhai.icu"
+  }
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+  <script defer src="https://umami.jinzhai.icu/script.js" data-website-id="d245001f-4e95-46d6-acfe-e28b6757b1e0"></script>
+  <script type="module" crossorigin src="/assets/index-mailfix-80b6ae91092b.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-i18n-seo-bH4MvaW--mailfix20261024.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-DuzLxSl2.css">
+<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script><link rel="stylesheet" href="/assets/mailfix.css">
+</head>
+
+<body>
+  <div id="app"></div>
+
+</body>
+
+</html>

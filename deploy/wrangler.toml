@@ -1,0 +1,8 @@
+# Deploy from this directory, using the existing backend.
+name = "tempmail"
+pages_build_output_dir = "./pages-hotfix"
+compatibility_date = "2024-05-13"
+
+[[services]]
+binding = "BACKEND"
+service = "cloudflare-temp-email"

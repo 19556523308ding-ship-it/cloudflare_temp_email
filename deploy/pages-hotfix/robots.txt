@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /user
+Disallow: /mail
+Disallow: /redeem
+
+Sitemap: https://mail.jinzhai.icu/sitemap.xml

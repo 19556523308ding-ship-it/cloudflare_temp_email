@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mail.jinzhai.icu/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/en</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/es</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/pt-BR</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/ja</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/de</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/tools</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/tools"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/tools"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/tools"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/tools"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/en/tools</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/tools"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/tools"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/tools"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/tools"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/es/tools</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/tools"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/tools"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/tools"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/tools"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/pt-BR/tools</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/tools"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/tools"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/tools"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/tools"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/ja/tools</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/tools"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/tools"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/tools"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/tools"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/de/tools</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/tools"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/tools"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/tools"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/tools"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/help</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/help"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/help"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/help"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/help"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/help"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/help"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/help"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/en/help</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/help"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/help"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/help"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/help"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/help"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/help"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/help"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/es/help</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/help"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/help"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/help"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/help"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/help"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/help"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/help"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/pt-BR/help</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/help"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/help"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/help"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/help"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/help"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/help"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/help"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/ja/help</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/help"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/help"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/help"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/help"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/help"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/help"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/help"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/de/help</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/help"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/help"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/help"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/help"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/help"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/help"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/help"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/privacy</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/privacy"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/en/privacy</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/privacy"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/es/privacy</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/privacy"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/pt-BR/privacy</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/privacy"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/ja/privacy</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/privacy"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/de/privacy</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/privacy"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/about</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/about"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/en/about</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/about"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/es/about</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/about"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/pt-BR/about</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/about"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/ja/about</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/about"/>
+  </url>
+  <url>
+    <loc>https://mail.jinzhai.icu/de/about</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mail.jinzhai.icu/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mail.jinzhai.icu/en/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mail.jinzhai.icu/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mail.jinzhai.icu/pt-BR/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mail.jinzhai.icu/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mail.jinzhai.icu/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mail.jinzhai.icu/about"/>
+  </url>
+</urlset>
