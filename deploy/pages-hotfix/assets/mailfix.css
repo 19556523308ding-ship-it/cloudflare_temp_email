@@ -1,0 +1,1 @@
+.index__modal{width:min(600px,calc(100vw - 24px))!important;max-height:calc(100dvh - 32px);overflow-y:auto}.index__modal .n-input-group{flex-wrap:wrap}.index__modal .n-button{min-height:40px}.mailfix-mobile-actions{display:none}@media(max-width:768px){.mailfix-mobile-actions{display:flex;justify-content:flex-end;margin:8px 12px}}
