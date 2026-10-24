@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-24",
+  "version": "v3",
+  "baseline_deployment_id": "7e64c628",
+  "baseline_asset": "index-mailfix-80b6ae91092b.js",
+  "baseline_sha256": "f07f45429292ab228b75edb7760cff37cf6f643cbd543fc3c15eb8d2e1b24284",
+  "patched_asset": "index-mailfix-70fb56447010.js",
+  "patched_sha256": "4ceace802c86d76f8fd4fc3ad679432bf7e203275830d55daa0c28ff17d57eb8",
+  "changes_summary": {
+    "P1-A": "创建成功立即保存凭证并发出 authenticated 关闭弹窗，刷新与绑定失败仅做非阻塞提示并提供重试，创建加入 mailBusy 独立互斥状态防并发重复提交",
+    "P1-B": "打开删除确认框时使用 mailOpenDelete 固定 target={address, credential}，展示固定 target.address，il fetch 请求在异步指纹采集前锁定 addressJwt 并注入 Authorization 头"
+  },
+  "files": {
+    "favicon.ico": {
+      "sha256": "db74ab0b78338c1f778f8398c45f4103c99aea0e845a3118a7750b4eeafd3445",
+      "status": "unchanged"
+    },
+    "index.html": {
+      "sha256": "3bc0d89cf293717e6399391fc264ab3a8b25b7b77fb97c5fa84dd143065e42ea",
+      "status": "modified"
+    },
+    "logo.png": {
+      "sha256": "c14d80049b77268a7c4f2c4f2f06c60a88e6267323780db570dc0d34a9182aac",
+      "status": "unchanged"
+    },
+    "manifest.webmanifest": {
+      "sha256": "01e1c21dc7fe010309adab9c428030860102a969af21f3be7e9277b64159234d",
+      "status": "unchanged"
+    },
+    "og-image.png": {
+      "sha256": "04acfe147b403eee67001f32915b8b113a6dd817d8200bfd5feebbef84f59916",
+      "status": "unchanged"
+    },
+    "registerSW.js": {
+      "sha256": "9742073ef7fc795e7673d98f272992843298426a0ffd8cb3507784df5143608b",
+      "status": "unchanged"
+    },
+    "sw.js": {
+      "sha256": "31682748a48d709d471b92a7e07ccfe2c208786d4c75771b00e60875f1cd6b62",
+      "status": "unchanged"
+    },
+    "assets/About-CXhC7ZzK.css": {
+      "sha256": "474e6a41137820b30aedbee446a4a366575ad00f7863814b93737adce227891b",
+      "status": "unchanged"
+    },
+    "assets/About-XV6MQRAu-mailfix20261024.js": {
+      "sha256": "5cf981a33085fa6ea0fb5d48e2394de37ab432bac21bd113f9395f09ea0ea303",
+      "status": "unchanged"
+    },
+    "assets/Admin-C0nSlec5.css": {
+      "sha256": "a0c2da7f432bf4e77885d6bc18438559b6e7de25a6a05e40191c1fe4438a74d5",
+      "status": "unchanged"
+    },
+    "assets/Admin-DnOGc-x_-mailfix20261024.js": {
+      "sha256": "751deb4f3f411937e779502b3468a22429beb38f4221f594bf6c4ffabb4811c8",
+      "status": "unchanged"
+    },
+    "assets/Help-Bs0Mrjle-mailfix20261024.js": {
+      "sha256": "1979ee2b8ef156205c8fe545bbd7cde2b1908e783fe4e83201afec1ea7118305",
+      "status": "unchanged"
+    },
+    "assets/Help-ze3cY9QP.css": {
+      "sha256": "21bc4eb9f69c0544e5509ad1c8d5efaeb7d2b392af6c85d1e9543be89e8d74c7",
+      "status": "unchanged"
+    },
+    "assets/index-DuzLxSl2.css": {
+      "sha256": "4b2ebe4b1eceb7921a3234961b63215d8b62cbbf2fd3e23721753c8619197779",
+      "status": "unchanged"
+    },
+    "assets/index-mailfix-70fb56447010.js": {
+      "sha256": "4ceace802c86d76f8fd4fc3ad679432bf7e203275830d55daa0c28ff17d57eb8",
+      "status": "modified"
+    },
+    "assets/Mail-CSoywyR--mailfix20261024.js": {
+      "sha256": "f8823eeaae433d468a5b5783ccea9e3f786545248966a5286151fe9e71c2880e",
+      "status": "unchanged"
+    },
+    "assets/Mail-CWrG18z5.css": {
+      "sha256": "c1882a1b4ba422576ce7b7b2bdd5d49bc16c16d9c416b1cfebb4986a8daccb67",
+      "status": "unchanged"
+    },
+    "assets/mailfix.css": {
+      "sha256": "a0b5eeec1b54e03c8bc1b0d810a701fd3a37adb2081b18c2ce2bd7caba7d53a2",
+      "status": "unchanged"
+    },
+    "assets/MailView-Bb1zGf1I-mailfix20261024.js": {
+      "sha256": "cddabb71e5144ba7949cfe1f84d048f41fe719e112035b50418983a96da15f5a",
+      "status": "unchanged"
+    },
+    "assets/MailView-DOB3WMqJ.css": {
+      "sha256": "a84b9c490e4183a914990881005132b9cd77e75cda3c796f63307e50dd855629",
+      "status": "unchanged"
+    },
+    "assets/mail_parser_wasm-cz1zJ7S0-mailfix20261024.js": {
+      "sha256": "16dbd702ae1f5d59672c7ca7aef06c22aa3007dbf0706bb917c03bc0aa8e1d69",
+      "status": "unchanged"
+    },
+    "assets/mail_parser_wasm_bg-42G7xZO-.wasm": {
+      "sha256": "7c6aa8b83be17cea23f08493a8216725dccfab15a8b1198a2bb35cdd6081ddb1",
+      "status": "unchanged"
+    },
+    "assets/Privacy-BcCHBPJm.css": {
+      "sha256": "635b0e81e19c6e900a186d344634af52d40affb70cbbbd06ed4532791a5b6d98",
+      "status": "unchanged"
+    },
+    "assets/Privacy-LhF7bQNf-mailfix20261024.js": {
+      "sha256": "166f73cd9126406611a79dbbfdefdd239b5e4f404cefc2a7f1dc48cff0bec411",
+      "status": "unchanged"
+    },
+    "assets/RadioButton-cE3V3ECG-mailfix20261024.js": {
+      "sha256": "16b9779805a0b64709619a180eadf4fafdc25408abdfdb007d9f110aa0d0c00c",
+      "status": "unchanged"
+    },
+    "assets/Redeem-DrKe_2ig.css": {
+      "sha256": "cc10a20faae90b1014937006e06e807fba10a08b9a1e5497f12961e270e47d2e",
+      "status": "unchanged"
+    },
+    "assets/Redeem-DxG1IPm4-mailfix20261024.js": {
+      "sha256": "7c2d8d9145ba9d8563c3e7a1c10569e296a24df0c3b1cc714952deb5241253a5",
+      "status": "unchanged"
+    },
+    "assets/SendMail-C8Iugqe8-mailfix20261024.js": {
+      "sha256": "7a31884d88a68cb38dc9e82c16956a6aced05f571b5de0080c13701772bc966f",
+      "status": "unchanged"
+    },
+    "assets/SendMail-CnwBhrsW-mailfix20261024.js": {
+      "sha256": "b699a26e0a89dbd419ab024dfe0203db20f89862343c43ce421f507e696399bb",
+      "status": "unchanged"
+    },
+    "assets/SendMail-CZaptXvs.css": {
+      "sha256": "d9e9e725ce3f6bfeb5e02df81844269ba59e8e5529e9e3cea7a8c1703e72c7a3",
+      "status": "unchanged"
+    },
+    "assets/SendMail-DszZlzv_.css": {
+      "sha256": "08a055f863de4897bb1c5794b777453a86590211af3414b9b67874aa47ac14b5",
+      "status": "unchanged"
+    },
+    "assets/ToolsIndex-1Anvnju7-mailfix20261024.js": {
+      "sha256": "fffe2249194321358118754282fa9e9c680276a5035f14d4f2c484df40c926f8",
+      "status": "unchanged"
+    },
+    "assets/ToolsIndex-CV2nvjqj.css": {
+      "sha256": "c351099d3e2460eca433484e5f26e491678793ede7e7066544e60166322fd5ab",
+      "status": "unchanged"
+    },
+    "assets/vendor-editor-BHtaHxM4.css": {
+      "sha256": "8b33d8ccc784c8e7e9abfa82ff3733327c1ce4c031abcd4542e6d3c1158b23af",
+      "status": "unchanged"
+    },
+    "assets/vendor-editor-Bu7wuPPW-mailfix20261024.js": {
+      "sha256": "9580ddf0bff9e451cd66273cfe49b5d637426a6bac2af79a75bbcf3bce9c125e",
+      "status": "unchanged"
+    },
+    "assets/vendor-i18n-seo-bH4MvaW--mailfix20261024.js": {
+      "sha256": "3aea7c206fd6af3a7f710a57dfa59b1f40c5bf445626a070d3248791ac86f1a6",
+      "status": "unchanged"
+    },
+    "assets/workbox-d1213528.js": {
+      "sha256": "3f8ae6bd186cdea2e27b3b706fa88bf8faae8c30f9feb7f758b72df6d8711d9e",
+      "status": "unchanged"
+    }
+  }
+}
