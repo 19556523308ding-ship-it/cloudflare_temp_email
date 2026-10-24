@@ -1,22 +1,32 @@
-// Injected inside the verified deployed Index.setup closure.
+// Injected inside the verified deployed Index.setup closure (v3).
 const {jwt:mailJwt,addressPassword:mailPassword,showAddressCredential:mailCredential}=Qt();
 const mailMessage=xn();
 const mailDeleting=O(false);
+const mailDeleteTarget=O({address:'',credential:''});
 const mailText=(zh,en)=>n.value.startsWith('zh')?zh:en;
 const mailDone=()=>{l.value=false;d.value=false;};
+const mailOpenDelete=()=>{
+  mailDeleteTarget.value={address:r.value.address,credential:mailJwt.value};
+  c.value=true;
+};
 const mailDelete=async()=>{
   if(mailDeleting.value)return;
   if(!a.value.enableUserDeleteEmail){
     mailMessage.error(mailText('站点未开放删除邮箱。','Mailbox deletion is disabled.'));
     return;
   }
+  const target=mailDeleteTarget.value;
+  if(!target?.credential||!target.address){
+    mailMessage.error(mailText('未选择有效邮箱。','No mailbox selected.'));
+    return;
+  }
   mailDeleting.value=true;
-  const deletedJwt=mailJwt.value;
-  const deletedAddress=r.value.address;
+  const deletedJwt=target.credential;
+  const deletedAddress=target.address;
   try{
-    const result=await ht.fetch('/api/delete_address',{method:'DELETE'});
+    const result=await ht.fetch('/api/delete_address',{method:'DELETE',addressJwt:deletedJwt});
     if(result?.success!==true)throw new Error(mailText('服务器未确认删除成功，请重试。','Server did not confirm deletion. Please retry.'));
-    // Remove all credentials for this address, preserving unrelated mailboxes.
+    // Remove all credentials for this target address, preserving unrelated mailboxes.
     try{
       const cached=JSON.parse(localStorage.getItem('LocalAddressCache')||'[]');
       const remaining=(Array.isArray(cached)?cached:[]).filter(token=>{

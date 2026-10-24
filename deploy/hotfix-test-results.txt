@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: completion closes create and sign-in dialogs
+ok 1 - completion closes create and sign-in dialogs
+  ---
+  duration_ms: 3.3348
+  type: 'test'
+  ...
+# Subtest: deletion calls the real endpoint and clears only deleted mailbox
+ok 2 - deletion calls the real endpoint and clears only deleted mailbox
+  ---
+  duration_ms: 2.3237
+  type: 'test'
+  ...
+# Subtest: server rejection retains credential and dialog
+ok 3 - server rejection retains credential and dialog
+  ---
+  duration_ms: 1.9942
+  type: 'test'
+  ...
+# Subtest: false success does not erase mailbox state
+ok 4 - false success does not erase mailbox state
+  ---
+  duration_ms: 3.0146
+  type: 'test'
+  ...
+# Subtest: duplicate confirmation makes one request
+ok 5 - duplicate confirmation makes one request
+  ---
+  duration_ms: 1.5822
+  type: 'test'
+  ...
+# Subtest: disabled deletion sends no request
+ok 6 - disabled deletion sends no request
+  ---
+  duration_ms: 1.2087
+  type: 'test'
+  ...
+# Subtest: switching mailbox while delete awaits preserves new selection
+ok 7 - switching mailbox while delete awaits preserves new selection
+  ---
+  duration_ms: 1.3541
+  type: 'test'
+  ...
+# Subtest: deployed artifact connects both completion listeners and no undefined handler
+ok 8 - deployed artifact connects both completion listeners and no undefined handler
+  ---
+  duration_ms: 7.3219
+  type: 'test'
+  ...
+# Subtest: actual compiled create success emits modal completion
+ok 9 - actual compiled create success emits modal completion
+  ---
+  duration_ms: 7.584
+  type: 'test'
+  ...
+# Subtest: actual compiled create failure does not falsely signal success
+ok 10 - actual compiled create failure does not falsely signal success
+  ---
+  duration_ms: 6.6909
+  type: 'test'
+  ...
+# Subtest: T-A1: create 200 + settings 500 preserves credential, closes dialog, emits authenticated, shows warning
+ok 11 - T-A1: create 200 + settings 500 preserves credential, closes dialog, emits authenticated, shows warning
+  ---
+  duration_ms: 22.9206
+  type: 'test'
+  ...
+# Subtest: T-A2: concurrent create attempts fire only 1 network request
+ok 12 - T-A2: concurrent create attempts fire only 1 network request
+  ---
+  duration_ms: 63.0836
+  type: 'test'
+  ...
+# Subtest: T-B1: delayed fingerprint with changed global JWT still sends target A credential in Authorization
+ok 13 - T-B1: delayed fingerprint with changed global JWT still sends target A credential in Authorization
+  ---
+  duration_ms: 45.8779
+  type: 'test'
+  ...
+# Subtest: T-B2: deleting target A preserves currently active mailbox B and cache
+ok 14 - T-B2: deleting target A preserves currently active mailbox B and cache
+  ---
+  duration_ms: 2.5564
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 347.1527
