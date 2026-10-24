@@ -10,6 +10,7 @@ import Turnstile from '../../components/Turnstile.vue'
 import { useGlobalState } from '../../store'
 import { api } from '../../api'
 import { getRouterPathWithLang, hashPassword } from '../../utils'
+import { completeMailboxSession, credentialAddress } from '../../utils/mailbox-lifecycle'
 
 const props = defineProps({
     bindUserAddress: {
@@ -38,12 +39,15 @@ const props = defineProps({
     },
 })
 
+const emit = defineEmits(['authenticated'])
+const sessionBusy = ref(false)
+const createTurnstileRef = ref(null)
 const message = useMessage()
 const notification = useNotification()
 const router = useRouter()
 
 const {
-    jwt, loading, openSettings,
+    jwt, loading, openSettings, settings,
     showAddressCredential, userSettings, addressPassword
 } = useGlobalState()
 
@@ -69,60 +73,52 @@ const initLoginMethod = () => {
     }
 }
 
+const acceptSession = async (res, created = false) => {
+    if (typeof res?.jwt !== 'string' || !res.jwt.trim()) throw new Error('Invalid mailbox response');
+    jwt.value = res.jwt;
+    addressPassword.value = res.password || '';
+    settings.value = { address: credentialAddress(res.jwt), send_balance: 0, fetched: true };
+    await completeMailboxSession({
+        bind: () => props.bindUserAddress(),
+        refresh: () => api.getSettings(),
+        warning: (stage, error) => message.warning(stage === 'bind'
+            ? `${t('bindUserAddressError')}: ${error.message}`
+            : `${locale.value.startsWith('zh') ? '邮箱已保存，刷新信息失败，请稍后重试' : 'Mailbox saved; details could not be refreshed. Please retry'}: ${error.message}`),
+        ready: () => emit('authenticated')
+    });
+    if (created) showAddressCredential.value = true;
+    await router.push(getRouterPathWithLang('/', locale.value));
+}
+
 const login = async () => {
-    if (loginMethod.value === 'password') {
-        // Password login
-        if (!loginAddress.value || !loginPassword.value) {
-            message.error(t('emailPasswordRequired'));
-            return;
-        }
-        try {
-            const res = await api.fetch('/api/address_login', {
-                method: 'POST',
-                body: JSON.stringify({
-                    email: loginAddress.value,
-                    password: await hashPassword(loginPassword.value),
-                    cf_token: loginCfToken.value
-                })
-            });
-            jwt.value = res.jwt;
-            await api.getSettings();
-            try {
-                await props.bindUserAddress();
-            } catch (error) {
-                message.error(`${t('bindUserAddressError')}: ${error.message}`);
-            }
-            await router.push(getRouterPathWithLang("/", locale.value));
-        } catch (error) {
-            message.error(error.message || "error");
-            loginTurnstileRef.value?.refresh?.();
-        }
+    if (sessionBusy.value) return;
+    if (loginMethod.value === 'password' && (!loginAddress.value || !loginPassword.value)) {
+        message.error(t('emailPasswordRequired'));
         return;
     }
-    if (!credential.value) {
+    if (loginMethod.value !== 'password' && !credential.value) {
         message.error(t('credentialInput'));
         return;
     }
+    sessionBusy.value = true;
     try {
-        await api.fetch('/open_api/credential_login', {
-            method: 'POST',
-            body: JSON.stringify({
-                credential: credential.value,
-                cf_token: loginCfToken.value
-            })
-        });
-        jwt.value = credential.value;
-        await api.getSettings();
-        try {
-            await props.bindUserAddress();
-        } catch (error) {
-            message.error(`${t('bindUserAddressError')}: ${error.message}`);
+        if (loginMethod.value === 'password') {
+            const res = await api.fetch('/api/address_login', {
+                method: 'POST',
+                body: JSON.stringify({ email: loginAddress.value, password: await hashPassword(loginPassword.value), cf_token: loginCfToken.value })
+            });
+            await acceptSession(res);
+        } else {
+            await api.fetch('/open_api/credential_login', {
+                method: 'POST',
+                body: JSON.stringify({ credential: credential.value, cf_token: loginCfToken.value })
+            });
+            await acceptSession({ jwt: credential.value });
         }
-        await router.push(getRouterPathWithLang("/", locale.value));
     } catch (error) {
-        message.error(error.message || "error");
+        message.error(error.message || 'error');
         loginTurnstileRef.value?.refresh?.();
-    }
+    } finally { sessionBusy.value = false; }
 }
 
 const { locale, t } = useScopedI18n('views.common.Login')
@@ -169,31 +165,18 @@ const generateName = async () => {
 };
 
 const newEmail = async () => {
+    if (sessionBusy.value) return;
+    sessionBusy.value = true;
     try {
-        // If custom names are disabled, send empty name to trigger backend auto-generation
-        const nameToSend = openSettings.value.disableCustomAddressName ? "" : emailName.value;
-        const domainToSend = subdomainMode.value === "custom"
-            ? `${customSubdomain.value.trim()}.${emailDomain.value}`
-            : emailDomain.value;
-        const res = await props.newAddressPath(
-            nameToSend,
-            domainToSend,
-            cfToken.value,
-            subdomainMode.value === "random"
-        );
-        jwt.value = res["jwt"];
-        addressPassword.value = res["password"] || '';
-        await api.getSettings();
-        await router.push(getRouterPathWithLang("/", locale.value));
-        showAddressCredential.value = true;
-        try {
-            await props.bindUserAddress();
-        } catch (error) {
-            message.error(`${t('bindUserAddressError')}: ${error.message}`);
-        }
+        const nameToSend = openSettings.value.disableCustomAddressName ? '' : emailName.value;
+        const domainToSend = subdomainMode.value === 'custom'
+            ? `${customSubdomain.value.trim()}.${emailDomain.value}` : emailDomain.value;
+        const res = await props.newAddressPath(nameToSend, domainToSend, cfToken.value, subdomainMode.value === 'random');
+        await acceptSession(res, true);
     } catch (error) {
-        message.error(error.message || "error");
-    }
+        message.error(error.message || 'error');
+        createTurnstileRef.value?.refresh?.();
+    } finally { sessionBusy.value = false; }
 };
 
 const openRedeemPage = async () => {
@@ -294,7 +277,7 @@ onMounted(async () => {
                         </n-button>
                     </div>
 
-                    <n-button @click="login" :loading="loading" type="primary" block secondary strong>
+                    <n-button @click="login" :loading="sessionBusy" :disabled="sessionBusy" type="primary" block secondary strong>
                         <template #icon>
                             <n-icon :component="EmailOutlined" />
                         </template>
@@ -360,9 +343,9 @@ onMounted(async () => {
                                 </n-input-group>
                             </div>
                         </n-form-item-row>
-                        <Turnstile v-model:value="cfToken" />
-                        <n-button type="primary" block secondary strong @click="newEmail" :loading="loading"
-                            :disabled="subdomainMode === 'custom' && !customSubdomain.trim()">
+                        <Turnstile ref="createTurnstileRef" v-model:value="cfToken" />
+                        <n-button type="primary" block secondary strong @click="newEmail" :loading="sessionBusy"
+                            :disabled="sessionBusy || subdomainMode === 'custom' && !customSubdomain.trim()">
                             <template #icon>
                                 <n-icon :component="NewLabelOutlined" />
                             </template>

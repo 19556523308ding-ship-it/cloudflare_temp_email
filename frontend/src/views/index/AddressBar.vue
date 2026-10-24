@@ -8,6 +8,7 @@ import { CheckCircleOutlineRound, MailOutlineRound, SecurityOutlined, SpeedOutli
 import { useGlobalState } from '../../store'
 import { api } from '../../api'
 import Login from '../common/Login.vue'
+import DeleteMailboxDialog from '../../components/DeleteMailboxDialog.vue'
 import TelegramAddress from './TelegramAddress.vue'
 import LocalAddress from './LocalAddress.vue'
 import AddressManagement from '../user/AddressManagement.vue'
@@ -31,6 +32,13 @@ const { locale, t } = useScopedI18n('views.index.AddressBar')
 const showAddressManage = ref(false)
 const showCreateModal = ref(false)
 const showLoginModal = ref(false)
+const showDeleteModal = ref(false)
+const { t: accountT } = useScopedI18n('views.index.AccountSettings')
+const closeSessionModals = () => {
+    showCreateModal.value = false;
+    showLoginModal.value = false;
+    showAddressManage.value = false;
+}
 
 const onUserLogin = async () => {
     await router.push(getRouterPathWithLang("/user", locale.value))
@@ -65,7 +73,14 @@ onMounted(async () => {
             <div class="workspace-card-wrap">
                 <MailAddressCard :address="settings.address" :is-waiting="true">
                     <template #header-actions>
-                        <n-button-group size="small">
+                        <n-flex size="small" :wrap="true">
+                            <n-button v-if="openSettings.enableUserCreateEmail" tertiary type="primary" @click="showCreateModal = true">
+                                <template #icon><n-icon :component="Plus" /></template>
+                                {{ locale.startsWith('zh') ? '新建邮箱' : 'New mailbox' }}
+                            </n-button>
+                            <n-button v-if="openSettings.enableUserDeleteEmail" data-testid="delete-current-mailbox" tertiary type="error" @click="showDeleteModal = true">
+                                {{ accountT('deleteMailbox') }}
+                            </n-button>
                             <n-button tertiary type="primary" @click="showAddressManage = true">
                                 <template #icon><n-icon :component="ExchangeAlt" /></template>
                                 {{ t('addressManage') }}
@@ -74,7 +89,7 @@ onMounted(async () => {
                                 <template #icon><n-icon :component="Redo" /></template>
                                 刷新
                             </n-button>
-                        </n-button-group>
+                        </n-flex>
                     </template>
 
                     <template #footer-actions>
@@ -114,7 +129,7 @@ onMounted(async () => {
                     </h1>
 
                     <p class="hero-sub-description">
-                        无需注册，即开即用。避免在陌生的活动、网站注册时暴露主邮箱，验证码、激活链接、测试邮件毫秒级极速接收。
+                        无需注册，即开即用。避免在陌生的活动、网站注册时暴露主邮箱，接收验证码、激活链接与测试邮件；送达时间取决于发件服务。
                     </p>
 
                     <!-- 三大保障标签 -->
@@ -171,20 +186,22 @@ onMounted(async () => {
 
         <!-- 邮箱管理弹窗 -->
         <n-modal v-model:show="showAddressManage" preset="card" :title="t('addressManage')"
-            style="width: 720px; max-width: 95vw;">
-            <TelegramAddress v-if="isTelegram" />
-            <AddressManagement v-else-if="userJwt" />
-            <LocalAddress v-else />
+            style="width: min(720px, calc(100vw - 24px)); max-height: calc(100dvh - 32px); overflow-y: auto;">
+            <TelegramAddress v-if="isTelegram" @authenticated="closeSessionModals" />
+            <AddressManagement v-else-if="userJwt" @authenticated="closeSessionModals" />
+            <LocalAddress v-else @authenticated="closeSessionModals" />
         </n-modal>
 
+        <DeleteMailboxDialog v-model:show="showDeleteModal" />
+
         <!-- 创建邮箱弹窗 -->
-        <n-modal v-model:show="showCreateModal" preset="card" title="创建临时邮箱" style="width: 600px; max-width: 95vw;">
-            <Login default-tab="register" />
+        <n-modal v-model:show="showCreateModal" preset="card" title="创建临时邮箱" style="width: min(600px, calc(100vw - 24px)); max-height: calc(100dvh - 32px); overflow-y: auto;">
+            <Login default-tab="register" @authenticated="closeSessionModals" />
         </n-modal>
 
         <!-- 登录已有邮箱弹窗 -->
-        <n-modal v-model:show="showLoginModal" preset="card" title="登录已有临时邮箱" style="width: 600px; max-width: 95vw;">
-            <Login default-tab="signin" />
+        <n-modal v-model:show="showLoginModal" preset="card" title="登录已有临时邮箱" style="width: min(600px, calc(100vw - 24px)); max-height: calc(100dvh - 32px); overflow-y: auto;">
+            <Login default-tab="signin" @authenticated="closeSessionModals" />
             <n-divider />
             <n-button @click="onUserLogin" type="primary" block secondary strong>
                 <template #icon><n-icon :component="User" /></template>

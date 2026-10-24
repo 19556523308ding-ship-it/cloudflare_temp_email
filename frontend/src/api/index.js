@@ -34,6 +34,7 @@ const interceptResponse = async (path, response) => {
 
 const apiFetch = async (path, options = {}) => {
     const showLoading = options.showLoading !== false;
+    const addressJwt = options.addressJwt ?? jwt.value;
     if (showLoading) loading.value = true;
     try {
         // Get browser fingerprint for request tracking
@@ -55,7 +56,7 @@ const apiFetch = async (path, options = {}) => {
         if (customAuthHeader) headers['x-custom-auth'] = customAuthHeader;
         const adminAuthHeader = safeHeaderValue(adminAuth.value);
         if (adminAuthHeader) headers['x-admin-auth'] = adminAuthHeader;
-        const authorizationHeader = safeBearerHeader(jwt.value);
+        const authorizationHeader = safeBearerHeader(addressJwt);
         if (authorizationHeader) headers['Authorization'] = authorizationHeader;
 
         const initialResponse = await instance.request(path, {
@@ -71,13 +72,13 @@ const apiFetch = async (path, options = {}) => {
             showAuth.value = true;
         }
         if (response.status >= 300) {
-            throw new Error(`[${response.status}]: ${response.data?.message || response.data}`);
+            throw new Error(`[${response.status}]: ${response.data?.message || response.data?.error || response.data}`);
         }
         const data = response.data;
         return data;
     } catch (error) {
         if (error.response) {
-            throw new Error(`Code ${error.response.status}: ${error.response.data?.message || error.response.data}`);
+            throw new Error(`Code ${error.response.status}: ${error.response.data?.message || error.response.data?.error || error.response.data}`);
         }
         throw error;
     } finally {

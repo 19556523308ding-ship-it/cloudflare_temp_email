@@ -9,6 +9,7 @@ import { useGlobalState } from '../../store'
 // @ts-ignore
 import Login from '../common/Login.vue';
 
+const emit = defineEmits(['authenticated'])
 const { jwt } = useGlobalState()
 // @ts-ignore
 const message = useMessage()
@@ -19,7 +20,7 @@ const tabValue = ref('address')
 const localAddressCache = useLocalStorage("LocalAddressCache", []);
 const data = computed(() => {
     // @ts-ignore
-    if (!localAddressCache.value.includes(jwt.value)) {
+    if (jwt.value && !localAddressCache.value.includes(jwt.value)) {
         // @ts-ignore
         localAddressCache.value.push(jwt.value)
     }
@@ -40,7 +41,7 @@ const data = computed(() => {
         } catch (e) {
             return {
                 valid: false,
-                address: `invalid jwt [${curJwt}]`,
+                address: "Invalid saved credential",
                 jwt: curJwt
             }
         }
@@ -51,7 +52,7 @@ const data = computed(() => {
 const bindAddress = async () => {
     try {
         // @ts-ignore
-        if (!localAddressCache.value.includes(jwt.value)) {
+        if (jwt.value && !localAddressCache.value.includes(jwt.value)) {
             // @ts-ignore
             localAddressCache.value.push(jwt.value)
         }
@@ -131,7 +132,7 @@ const columns = [
                 </div>
             </n-tab-pane>
             <n-tab-pane name="create_or_bind" :tab="t('create_or_bind')">
-                <Login :bindUserAddress="bindAddress" />
+                <Login @authenticated="emit('authenticated')" :bindUserAddress="bindAddress" />
             </n-tab-pane>
         </n-tabs>
     </div>

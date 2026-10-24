@@ -220,4 +220,14 @@ const handleCopy = async () => {
   gap: 12px;
   margin-top: 14px;
 }
+@media (max-width: 600px) {
+  .mail-address-card { padding: 16px 12px; }
+  .card-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .header-actions { width: 100%; min-width: 0; }
+  .address-display-row { flex-wrap: wrap; gap: 10px; padding: 12px; }
+  .address-text-container { flex-basis: calc(100% - 60px); }
+  .address-val { white-space: normal; overflow-wrap: anywhere; font-size: 16px; }
+  .copy-btn { width: 100%; justify-content: center; min-height: 44px; }
+  .card-footer-actions { flex-wrap: wrap; }
+}
 </style>

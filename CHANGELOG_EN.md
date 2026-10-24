@@ -15,6 +15,8 @@
 
 ### Bug Fixes
 
+- fix: |Mailbox UI| Close brand-fork session dialogs on success, preserve created mailboxes on follow-up failure, centralize deletion with a captured credential and cache cleanup, and expose deletion on mobile.
+
 - fix: |Mail| Check the SMTP envelope sender and every From email address against sender blacklists; parse addresses independently so body parsing failures or multiple From addresses cannot skip matching; preserve envelope checks on address parsing errors
 - fix: |AI Extract| In `ai` mode, an address allowlist miss now skips only the Workers AI call and still falls back to local verification-code extraction
 

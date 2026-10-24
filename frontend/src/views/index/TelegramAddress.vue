@@ -10,6 +10,7 @@ import { api } from '../../api'
 // @ts-ignore
 import Login from '../common/Login.vue';
 
+const emit = defineEmits(['authenticated'])
 const { jwt, telegramApp } = useGlobalState()
 // @ts-ignore
 const message = useMessage()
@@ -138,7 +139,7 @@ onMounted(async () => {
                 </div>
             </n-tab-pane>
             <n-tab-pane name="bind" :tab="t('bind')">
-                <Login :newAddressPath="newAddressPath" :bindUserAddress="bindAddress" />
+                <Login @authenticated="emit('authenticated')" :newAddressPath="newAddressPath" :bindUserAddress="bindAddress" />
             </n-tab-pane>
         </n-tabs>
     </div>

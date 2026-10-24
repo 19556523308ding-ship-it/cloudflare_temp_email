@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import DeleteMailboxDialog from '../../components/DeleteMailboxDialog.vue'
 import { useScopedI18n } from '@/i18n/app'
 import { useRouter } from 'vue-router'
 
@@ -28,19 +29,6 @@ const logout = async () => {
     await router.push(getRouterPathWithLang("/", locale.value))
     location.reload()
 }
-
-const deleteAccount = async () => {
-    try {
-        await api.fetch(`/api/delete_address`, {
-            method: 'DELETE'
-        });
-        jwt.value = '';
-        await router.push(getRouterPathWithLang("/", locale.value))
-        location.reload()
-    } catch (error) {
-        message.error(error.message || "error");
-    }
-};
 
 const clearInbox = async () => {
     try {
@@ -125,14 +113,7 @@ const changePassword = async () => {
                 </n-button>
             </template>
         </n-modal>
-        <n-modal v-model:show="showDeleteAccount" preset="dialog" :title="t('deleteMailbox')">
-            <p>{{ t('deleteAccountConfirm') }}</p>
-            <template #action>
-                <n-button :loading="loading" @click="deleteAccount" size="small" tertiary type="error">
-                    {{ t('deleteMailbox') }}
-                </n-button>
-            </template>
-        </n-modal>
+        <DeleteMailboxDialog v-model:show="showDeleteAccount" />
         <n-modal v-model:show="showClearInbox" preset="dialog" :title="t('clearInbox')">
             <p>{{ t('clearInboxConfirm') }}</p>
             <template #action>

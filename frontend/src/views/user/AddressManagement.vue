@@ -11,6 +11,7 @@ import AddressCredentialModal from '../../components/AddressCredentialModal.vue'
 
 import Login from '../common/Login.vue';
 
+const emit = defineEmits(['authenticated'])
 const { jwt } = useGlobalState()
 const message = useMessage()
 const router = useRouter()
@@ -279,7 +280,7 @@ watch([page, pageSize], async () => {
                 </div>
             </n-tab-pane>
             <n-tab-pane name="create_or_bind" :tab="t('create_or_bind')">
-                <Login />
+                <Login @authenticated="emit('authenticated')" />
             </n-tab-pane>
         </n-tabs>
     </div>
